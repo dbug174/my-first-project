@@ -1,0 +1,9 @@
+import { Octokit } from "octokit";
+
+const octokit = new Octokit({
+  auth: "TU_TOKEN"
+});
+
+const notifications = await octokit.request("GET /notifications");
+
+console.log(notifications.data);
